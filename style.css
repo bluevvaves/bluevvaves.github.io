@@ -1,0 +1,34 @@
+/* h1{
+    color:pink;
+    text-decoration: dashed;
+    font-size: 40px;
+}
+
+h1:hover{
+    font-size: 60px;
+    transition: all 1s;
+    color:aquamarine;
+}
+
+h2{
+    color:palevioletred;
+}
+
+h2:hover{
+    font-size: 40px;
+    transition: all 1s;
+    color:aqua
+} */
+
+#outer{
+
+height: 100px;
+background:hotpink;
+
+}
+
+#inner{
+    height: 50%;
+    width: 50%;
+    background: plum;
+}
