@@ -1,0 +1,61 @@
+h1{
+    color: aquamarine;
+    font-size: 52px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1:hover{
+  
+    color: gold;
+    transition: color 2s ease;
+
+}
+
+h2{
+    color:white;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p{
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+#outer{
+
+    height: 5px;
+    background:white;
+    
+    }
+
+.image-container img {
+    width: 640px; /* Adjust the width as needed */
+    float: left;
+    margin-right: 40px; /* Add some margin between images if needed */
+
+}
+
+.small-image {
+    width: 100x; /* Set the width of the image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+body {
+    background-image: url('https://i.pinimg.com/originals/ce/5d/84/ce5d84f2809a77fcc0970e33f81d6a6e.gif');
+    background-repeat: repeat;
+}
+
+
+
+footer {
+    height: 450px; /* Set the height of the footer as needed */
+    background-color: transparent; /* Set the background color of the footer */
+    position: fixed; /* Position the footer fixed at the bottom of the viewport */
+    bottom: 0; /* Align the footer to the bottom */
+    width: 100%; /* Make the footer take the full width of the viewport */
+}
