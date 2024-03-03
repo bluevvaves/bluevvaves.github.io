@@ -50,6 +50,11 @@ body {
     background-repeat: repeat;
 }
 
+h3{
+    color:cyan;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 
 footer {
