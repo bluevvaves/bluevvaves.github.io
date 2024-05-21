@@ -9,7 +9,7 @@ function setup() {
 }
 
 function draw() {
-  if (frameCount % 10 == 0) { // Execute every second
+  if (frameCount % 10 == 0) { // Execute every 10 frames (approximately 6 times per second at 60 FPS)
     let dice1 = rollDice();
     let dice2 = rollDice();
     let length = dice1 * 10; // Convert dice roll to digital cm (assuming 1 cm = 10 pixels)
@@ -58,34 +58,30 @@ function draw() {
     // Check if the new position is outside the canvas and wrap around
     let wrapped = false;
     if (newX < 0) {
-      newX = width + newX;
+      newX += width;
       wrapped = true;
     } else if (newX > width) {
-      newX = newX - width;
+      newX -= width;
       wrapped = true;
     }
     if (newY < 0) {
-      newY = height + newY;
+      newY += height;
       wrapped = true;
     } else if (newY > height) {
-      newY = newY - height;
+      newY -= height;
       wrapped = true;
     }
 
-    // Draw the line only if it does not wrap around vertically
-    if (wrapped && (direction == 1 || direction == 6)) {
-      // Just move the current position
-      x = newX;
-      y = newY;
-    } else {
-      // Draw the line
+    // Draw the line only if it does not wrap around
+    if (!wrapped) {
       line(x, y, newX, newY);
-      x = newX;
-      y = newY;
     }
+
+    // Update current position
+    x = newX;
+    y = newY;
   }
 }
-
 
 function rollDice() {
   return Math.floor(Math.random() * 6) + 1;
@@ -95,4 +91,5 @@ function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
   x = width / 2;
   y = height / 2;
+  background(255); // Optional: Clear the background on resize
 }
