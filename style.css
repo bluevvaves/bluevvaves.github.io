@@ -32,3 +32,8 @@ background:hotpink;
     width: 50%;
     background: plum;
 }
+
+body {
+    background-image: url('https://img.freepik.com/premium-vector/y2k-seamless-pattern-with-chess-distorted-checkered-vector-background-trendy-retro-psychedelic_651519-365.jpg');
+    background-repeat: repeat;
+}
