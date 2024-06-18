@@ -93,3 +93,9 @@ function windowResized() {
   y = height / 2;
   background(255); // Optional: Clear the background on resize
 }
+
+function keyPressed() {
+  if (keyCode === ENTER) {
+    saveCanvas('lines', 'png');
+  }
+  }
