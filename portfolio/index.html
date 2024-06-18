@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
 
-    <style>
-      /* div {
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+
+  <style>
+    /* div {
         width: 100px;
         height: 100px;
       }
@@ -23,48 +24,830 @@
         background: green;
       } */
 
-      .desktop {
+    .desktop-p {
+      display: block;
+    }
+
+    .tablet-p,
+    .phone-p {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .tablet-p {
         display: block;
       }
-      .tablet,
-      .phone {
+
+      .phone-p {
         display: none;
       }
 
-      @media (max-width: 768px) {
-        .tablet {
-          display: block;
-        }
-        .phone {
-          display: none;
-        }
-        .desktop {
-          display: none;
-        }
+      .desktop-p {
+        display: none;
+      }
+    }
+
+    @media (max-width: 425px) {
+      .tablet-p {
+        display: none;
       }
 
-      @media (max-width: 425px) {
-        .tablet {
-          display: none;
-        }
-        .phone {
-          display: block;
-        }
-        .desktop {
-          display: none;
-        }
+      .phone-p {
+        display: block;
+      }
+
+      .desktop-p {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="desktop-p">
+
+    <img src="./desktop-p.svg" alt="">
+  </div>
+
+  <div class="tablet-p">
+    <img src="./tablet-p.svg" alt="">
+  </div>
+
+  <div class="phone-p">
+    <img src="./phone-p.svg" alt="">
+  </div>
+
+  <!---desktop version below-->
+
+  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+    y="0px" viewBox="0 0 1366 9168.9" style="enable-background:new 0 0 1366 9168.9;" xml:space="preserve">
+    <style type="text/css">
+      .st0 {
+        fill: #FF10DD;
+      }
+
+      .st1 {
+        fill: #CC58B3;
+      }
+
+      .st2 {
+        fill: #56CCC6;
+      }
+
+      .st3 {
+        fill: #0F0F0F;
+      }
+
+      .st4 {
+        enable-background: new;
+      }
+
+      .st5 {
+        fill: #BE7ABD;
+      }
+
+      .st6 {
+        fill: #633D62;
+      }
+
+      .st7 {
+        fill: #593659;
+      }
+
+      .st8 {
+        fill: #623D61;
+      }
+
+      .st9 {
+        fill: #828182;
+      }
+
+      .st10 {
+        fill: #868486;
+      }
+
+      .st11 {
+        fill: #797979;
+      }
+
+      .st12 {
+        fill: #492E49;
+      }
+
+      .st13 {
+        fill: #656465;
+      }
+
+      .st14 {
+        fill: #8D5B8C;
+      }
+
+      .st15 {
+        fill: #714670;
+      }
+
+      .st16 {
+        fill: #8F5A8E;
+      }
+
+      .st17 {
+        fill: #C480C3;
+      }
+
+      .st18 {
+        fill: #8E5A8E;
+      }
+
+      .st19 {
+        fill: #A268A2;
+      }
+
+      .st20 {
+        fill: #D78AD6;
+      }
+
+      .st21 {
+        fill: #6E6D6E;
+      }
+
+      .st22 {
+        fill: #6D6B6D;
+      }
+
+      .st23 {
+        fill: #533653;
+      }
+
+      .st24 {
+        fill: #7A787A;
+      }
+
+      .st25 {
+        fill: #664365;
+      }
+
+      .st26 {
+        fill: #B172B0;
+      }
+
+      .st27 {
+        fill: #603C60;
+      }
+
+      .st28 {
+        fill: #7B4D7B;
+      }
+
+      .st29 {
+        fill: #614061;
+      }
+
+      .st30 {
+        fill: #513251;
+      }
+
+      .st31 {
+        fill: #673F66;
+      }
+
+      .st32 {
+        fill: #5F3C5F;
+      }
+
+      .st33 {
+        fill: #804F80;
+      }
+
+      .st34 {
+        fill: #C47AC3;
+      }
+
+      .st35 {
+        fill: #DE8CDD;
+      }
+
+      .st36 {
+        fill: #7C4D7C;
+      }
+
+      .st37 {
+        fill: #895689;
+      }
+
+      .st38 {
+        fill: #BC79BB;
+      }
+
+      .st39 {
+        fill: #6B416B;
+      }
+
+      .st40 {
+        fill: #E296E1;
+      }
+
+      .st41 {
+        fill: #633D63;
+      }
+
+      .st42 {
+        fill: #704670;
+      }
+
+      .st43 {
+        fill: #FFFFFF;
+      }
+
+      .st44 {
+        fill: #664366;
+      }
+
+      .st45 {
+        fill: #815080;
+      }
+
+      .st46 {
+        fill: #7D4E7C;
+      }
+
+      .st47 {
+        fill: #895688;
+      }
+
+      .st48 {
+        fill: #FEFEFE;
       }
     </style>
-  </head>
-  <body>
-    <div class="desktop"></div>
+    <rect id="mednieks" x="118.2" y="2616.8" class="st0" width="261" height="261" />
+    <foreignObject x="118.2" y="2616.8" class="st0" width="261" height="261">
+      <img width="100%" height="100%" src="./raw-images/mednieks.gif" alt="">
+    </foreignObject>
+    <rect id="kine" x="472.2" y="2616.8" class="st0" width="463.7" height="261" />
+    <foreignObject x="472.2" y="2616.8" class="st0" width="463.7" height="261">
+      <img width="100%" height="100%" src="./raw-images/kine.gif" alt="">
+    </foreignObject>
+    <rect id="zieds" x="1029.2" y="2616.6" class="st0" width="238.9" height="261.2" />
+    <foreignObject x="1029.2" y="2616.6" class="st0" width="238.9" height="261.2">
+      <img width="100%" height="100%" src="./raw-images/zieds.gif" alt="">
+    </foreignObject>
+    <rect id="art1" x="227.4" y="2944.3" class="st0" width="261" height="261" />
+    <foreignObject x="227.4" y="2944.3" class="st0" width="261" height="261">
+      <img width="100%" height="100%" src="./raw-images/artgif1.gif" alt="">
+    </foreignObject>
+    <rect id="art2" x="546.4" y="2944.3" class="st0" width="261" height="261" />
+    <foreignObject x="546.4" y="2944.3" class="st0" width="261" height="261">
+      <img width="100%" height="100%" src="./raw-images/artgif2.gif" alt="">
+    </foreignObject>
+    <rect id="art3" x="876.3" y="2944.3" class="st0" width="261" height="261" />
+    <foreignObject x="876.3" y="2944.3" class="st0" width="261" height="261">
+      <img width="100%" height="100%" src="./raw-images/artgif3.gif" alt="">
+    </foreignObject>
+    <rect id="foto-art1" x="86.9" y="3951.4" class="st0" width="380.8" height="285.6" />
+    <foreignObject x="86.9" y="3951.4" class="st0" width="380.8" height="285.6">
+      <img width="100%" height="100%" src="./raw-images/foto-art1.jpg" alt="">
+    </foreignObject>
+    <rect id="foto-cat" x="492.6" y="3951.4" class="st0" width="380.8" height="288.1" />
+    <foreignObject x="492.6" y="3951.4" class="st0" width="380.8" height="288.1">
+      <img width="100%" height="100%" src="./raw-images/foto-cat.JPG" alt="">
+    </foreignObject>
+    <rect id="foto-art2" x="898.3" y="3951.4" class="st0" width="380.8" height="285.6" />
+    <foreignObject x="898.3" y="3951.4" class="st0" width="380.8" height="285.6">
+      <img width="100%" height="100%" src="./raw-images/foto-art2.jpg" alt="">
+    </foreignObject>
+    <rect id="foto-doc" x="272.6" y="4264.5" class="st0" width="386.4" height="289.8" />
+    <foreignObject x="272.6" y="4264.5" class="st0" width="386.4" height="289.8">
+      <img width="100%" height="100%" src="./raw-images/foto-doc.JPG" alt="">
+    </foreignObject>
+    <rect id="foto-ground" x="679.6" y="4264.5" class="st0" width="387.7" height="290.8" />
+    <foreignObject x="679.6" y="4264.5" class="st0" width="387.7" height="290.8">
+      <img width="100%" height="100%" src="./raw-images/foto-ground.JPG" alt="">
+    </foreignObject>
+    <rect id="foto-book1" x="127.6" y="5284" class="st0" width="321" height="455.5" />
+    <foreignObject x="127.6" y="5284" class="st0" width="321" height="455.5">
+      <img width="100%" height="100%" src="./raw-images/graph-book1.jpg" alt="">
+    </foreignObject>
+    <rect id="foto-book2" x="481.4" y="5284" class="st0" width="322" height="455.5" />
+    <foreignObject x="481.4" y="5284" class="st0" width="322" height="455.5">
+      <img width="100%" height="100%" src="./raw-images/graph-book2.jpg" alt="">
+    </foreignObject>
+    <rect id="foto-future" x="836.2" y="5309" class="st0" width="405.4" height="405.4" />
+    <foreignObject x="836.2" y="5309" class="st0" width="405.4" height="405.4">
+      <img width="100%" height="100%" src="./raw-images/graph-future.jpg" alt="">
+    </foreignObject>
+    <rect id="misc-video1" x="82.2" y="6629.4" class="st0" width="583.2" height="328.1" />
+    <foreignObject x="82.2" y="6629.4" class="st0" width="583.2" height="328.1">
+      <img width="100%" height="100%" src="./raw-images/misc-video1.jpg" alt="">
+    </foreignObject>
+    <rect id="misc-video2" x="696.8" y="6629.4" class="st0" width="578.7" height="325.5" />
+    <foreignObject x="696.8" y="6629.4" class="st0" width="578.7" height="325.5">
+      <img width="100%" height="100%" src="./raw-images/misc-video2.jpg" alt="">
+    </foreignObject>
+    <rect id="misc-lines" x="72.8" y="7022" class="st0" width="582.5" height="280.9" />
+    <foreignObject x="72.8" y="7022" class="st0" width="582.5" height="280.9">
+      <img width="100%" height="100%" src="./raw-images/misc-lines.png" alt="">
+    </foreignObject>
+  </svg>
 
-    <img src="./desktop.svg" alt="">
+  <!--desktop version end-->
 
-    <div class="tablet"></div>
-<img src="./tablet.svg" alt="">
+  <!--tablet version below-->
 
-    <div class="phone"></div>   
-     <img src="./phone.svg" alt="">
-  </body>
+  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+    y="0px" viewBox="0 0 1125 11604.8" style="enable-background:new 0 0 1125 11604.8;" xml:space="preserve">
+    <style type="text/css">
+      .st0 {
+        fill: #FF10DD;
+      }
+
+      .st1 {
+        fill: #CC58B3;
+      }
+
+      .st2 {
+        fill: #56CCC6;
+      }
+
+      .st3 {
+        fill: #0F0F0F;
+      }
+
+      .st4 {
+        enable-background: new;
+      }
+
+      .st5 {
+        fill: #BE7ABD;
+      }
+
+      .st6 {
+        fill: #633D62;
+      }
+
+      .st7 {
+        fill: #593659;
+      }
+
+      .st8 {
+        fill: #623D61;
+      }
+
+      .st9 {
+        fill: #828182;
+      }
+
+      .st10 {
+        fill: #868486;
+      }
+
+      .st11 {
+        fill: #797979;
+      }
+
+      .st12 {
+        fill: #492E49;
+      }
+
+      .st13 {
+        fill: #656465;
+      }
+
+      .st14 {
+        fill: #8D5B8C;
+      }
+
+      .st15 {
+        fill: #714670;
+      }
+
+      .st16 {
+        fill: #8F5A8E;
+      }
+
+      .st17 {
+        fill: #C480C3;
+      }
+
+      .st18 {
+        fill: #8E5A8E;
+      }
+
+      .st19 {
+        fill: #A268A2;
+      }
+
+      .st20 {
+        fill: #D78AD6;
+      }
+
+      .st21 {
+        fill: #6E6D6E;
+      }
+
+      .st22 {
+        fill: #6D6B6D;
+      }
+
+      .st23 {
+        fill: #533653;
+      }
+
+      .st24 {
+        fill: #7A787A;
+      }
+
+      .st25 {
+        fill: #664365;
+      }
+
+      .st26 {
+        fill: #B172B0;
+      }
+
+      .st27 {
+        fill: #603C60;
+      }
+
+      .st28 {
+        fill: #7B4D7B;
+      }
+
+      .st29 {
+        fill: #614061;
+      }
+
+      .st30 {
+        fill: #513251;
+      }
+
+      .st31 {
+        fill: #673F66;
+      }
+
+      .st32 {
+        fill: #5F3C5F;
+      }
+
+      .st33 {
+        fill: #804F80;
+      }
+
+      .st34 {
+        fill: #C47AC3;
+      }
+
+      .st35 {
+        fill: #DE8CDD;
+      }
+
+      .st36 {
+        fill: #7C4D7C;
+      }
+
+      .st37 {
+        fill: #895689;
+      }
+
+      .st38 {
+        fill: #BC79BB;
+      }
+
+      .st39 {
+        fill: #6B416B;
+      }
+
+      .st40 {
+        fill: #E296E1;
+      }
+
+      .st41 {
+        fill: #633D63;
+      }
+
+      .st42 {
+        fill: #704670;
+      }
+
+      .st43 {
+        fill: #FFFFFF;
+      }
+
+      .st44 {
+        fill: #664366;
+      }
+
+      .st45 {
+        fill: #815080;
+      }
+
+      .st46 {
+        fill: #7D4E7C;
+      }
+
+      .st47 {
+        fill: #895688;
+      }
+
+      .st48 {
+        fill: #FEFEFE;
+      }
+    </style>
+    <rect id="foto-art1-t" x="102.3" y="4819.9" class="st0" width="445.6" height="334.2" />
+    <foreignObject x="102.3" y="4819.9" class="st0" width="445.6" height="334.2">
+      <img width="100%" height="100%" src="./raw-images/foto-art1.jpg" alt="">
+    </foreignObject>
+    <rect id="foto-art2-t" x="577" y="4819.9" class="st0" width="445.6" height="334.2" />
+    <foreignObject x="577" y="4819.9" class="st0" width="445.6" height="334.2">
+      <img width="100%" height="100%" src="./raw-images/foto-art2.jpg" alt="">
+    </foreignObject>
+    <rect id="foto-cat-t" x="102.3" y="5191.7" class="st0" width="445.6" height="334.2" />
+    <foreignObject x="102.3" y="5191.7" class="st0" width="445.6" height="334.2">
+      <img width="100%" height="100%" src="./raw-images/foto-cat.JPG" alt="">
+    </foreignObject>
+    <rect id="foto-doc-t" x="577" y="5190.5" class="st0" width="443" height="332.2" />
+    <foreignObject x="577" y="5190.5" class="st0" width="443" height="332.2">
+      <img width="100%" height="100%" src="./raw-images/foto-doc.JPG" alt="">
+    </foreignObject>
+    <rect id="foto-ground-t" x="341" y="5559.2" class="st0" width="443" height="332.2" />
+    <foreignObject x="341" y="5559.2" class="st0" width="443" height="332.2">
+      <img width="100%" height="100%" src="./raw-images/foto-ground.JPG" alt="">
+    </foreignObject>
+    <rect id="book1-t" x="100.7" y="6509.7" class="st0" width="449.7" height="638.1" />
+    <foreignObject x="100.7" y="6509.7" class="st0" width="449.7" height="638.1">
+      <img width="100%" height="100%" src="./raw-images/graph-book1.jpg" alt="">
+    </foreignObject>
+    <rect id="book2-t" x="573.2" y="6509.7" class="st0" width="451.1" height="638.1" />
+    <foreignObject x="573.2" y="6509.7" class="st0" width="451.1" height="638.1">
+      <img width="100%" height="100%" src="./raw-images/graph-book2.jpg" alt="">
+    </foreignObject>
+    <rect id="future" x="265.1" y="7187.7" class="st0" width="616.2" height="616.2" />
+    <foreignObject x="265.1" y="7187.7" class="st0" width="616.2" height="616.2">
+      <img width="100%" height="100%" src="./raw-images/graph-future.jpg" alt="">
+    </foreignObject>
+    <rect id="video1-t" x="204.9" y="8440" class="st0" width="736.6" height="414.4" />
+    <foreignObject x="204.9" y="8440" class="st0" width="736.6" height="414.4">
+      <img width="100%" height="100%" src="./raw-images/misc-video1.jpg" alt="">
+    </foreignObject>
+    <rect id="video2-t" x="204.9" y="8910.3" class="st0" width="732.5" height="411.5" />
+    <foreignObject x="204.9" y="8910.3" class="st0" width="732.5" height="411.5">
+      <img width="100%" height="100%" src="./raw-images/misc-video2.jpg" alt="">
+    </foreignObject>
+    <rect id="lines-t" x="204.3" y="9379.8" class="st0" width="733.1" height="353.5" />
+    <foreignObject x="204.3" y="9379.8" class="st0" width="733.1" height="353.5">
+      <img width="100%" height="100%" src="./raw-images/misc-lines.png" alt="">
+    </foreignObject>
+  </svg>
+
+  <!--tablet version end-->
+
+  <!--phone version below-->
+
+  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+    y="0px" viewBox="0 0 769.2 10972.4" style="enable-background:new 0 0 769.2 10972.4;" xml:space="preserve">
+    <style type="text/css">
+      .st0 {
+        fill: #FF10DD;
+      }
+
+      .st1 {
+        fill: #CC58B3;
+      }
+
+      .st2 {
+        fill: #56CCC6;
+      }
+
+      .st3 {
+        fill: #0F0F0F;
+      }
+
+      .st4 {
+        enable-background: new;
+      }
+
+      .st5 {
+        fill: #BE7ABD;
+      }
+
+      .st6 {
+        fill: #633D62;
+      }
+
+      .st7 {
+        fill: #593659;
+      }
+
+      .st8 {
+        fill: #623D61;
+      }
+
+      .st9 {
+        fill: #828182;
+      }
+
+      .st10 {
+        fill: #868486;
+      }
+
+      .st11 {
+        fill: #797979;
+      }
+
+      .st12 {
+        fill: #492E49;
+      }
+
+      .st13 {
+        fill: #656465;
+      }
+
+      .st14 {
+        fill: #8D5B8C;
+      }
+
+      .st15 {
+        fill: #714670;
+      }
+
+      .st16 {
+        fill: #8F5A8E;
+      }
+
+      .st17 {
+        fill: #C480C3;
+      }
+
+      .st18 {
+        fill: #8E5A8E;
+      }
+
+      .st19 {
+        fill: #A268A2;
+      }
+
+      .st20 {
+        fill: #D78AD6;
+      }
+
+      .st21 {
+        fill: #6E6D6E;
+      }
+
+      .st22 {
+        fill: #6D6B6D;
+      }
+
+      .st23 {
+        fill: #533653;
+      }
+
+      .st24 {
+        fill: #7A787A;
+      }
+
+      .st25 {
+        fill: #664365;
+      }
+
+      .st26 {
+        fill: #B172B0;
+      }
+
+      .st27 {
+        fill: #603C60;
+      }
+
+      .st28 {
+        fill: #7B4D7B;
+      }
+
+      .st29 {
+        fill: #614061;
+      }
+
+      .st30 {
+        fill: #513251;
+      }
+
+      .st31 {
+        fill: #673F66;
+      }
+
+      .st32 {
+        fill: #5F3C5F;
+      }
+
+      .st33 {
+        fill: #804F80;
+      }
+
+      .st34 {
+        fill: #C47AC3;
+      }
+
+      .st35 {
+        fill: #DE8CDD;
+      }
+
+      .st36 {
+        fill: #7C4D7C;
+      }
+
+      .st37 {
+        fill: #895689;
+      }
+
+      .st38 {
+        fill: #BC79BB;
+      }
+
+      .st39 {
+        fill: #6B416B;
+      }
+
+      .st40 {
+        fill: #E296E1;
+      }
+
+      .st41 {
+        fill: #633D63;
+      }
+
+      .st42 {
+        fill: #704670;
+      }
+
+      .st43 {
+        fill: #FFFFFF;
+      }
+
+      .st44 {
+        fill: #664366;
+      }
+
+      .st45 {
+        fill: #815080;
+      }
+
+      .st46 {
+        fill: #7D4E7C;
+      }
+
+      .st47 {
+        fill: #895688;
+      }
+
+      .st48 {
+        fill: #FEFEFE;
+      }
+    </style>
+    <rect id="foto-art1-ph" x="145.8" y="2826" class="st0" width="474.8" height="356.1" />
+    <foreignObject x="145.8" y="2826" class="st0" width="474.8" height="356.1">
+      <img width="100%" height="100%" src="./raw-images/foto-art1.jpg" alt="">
+    </foreignObject>
+    <rect id="foto-art2-ph" x="145.8" y="3214.3" class="st0" width="474.8" height="360.2" />
+    <foreignObject x="145.8" y="3214.3" class="st0" width="474.8" height="360.2">
+      <img width="100%" height="100%" src="./raw-images/foto-art2.jpg" alt="">
+    </foreignObject>
+    <rect id="foto-cat-ph" x="145.8" y="3601.7" class="st0" width="474.8" height="356.1" />
+    <foreignObject x="145.8" y="3601.7" class="st0" width="474.8" height="356.1">
+      <img width="100%" height="100%" src="./raw-images/foto-cat.JPG" alt="">
+    </foreignObject>
+    <rect id="foto-doc-ph" x="147.2" y="3987.4" class="st0" width="472" height="354" />
+    <foreignObject x="147.2" y="3987.4" class="st0" width="472" height="354">
+      <img width="100%" height="100%" src="./raw-images/foto-doc.JPG" alt="">
+    </foreignObject>
+    <rect id="foto-ground-ph" x="145.8" y="4381.8" class="st0" width="473.4" height="351" />
+    <foreignObject x="145.8" y="4381.8" class="st0" width="473.4" height="351">
+      <img width="100%" height="100%" src="./raw-images/foto-ground.JPG" alt="">
+    </foreignObject>
+    <rect id="book1-ph" x="148.7" y="5319.8" class="st0" width="478.5" height="678.9" />
+    <foreignObject x="148.7" y="5319.8" class="st0" width="478.5" height="678.9">
+      <img width="100%" height="100%" src="./raw-images/graph-book1.jpg" alt="">
+    </foreignObject>
+    <rect id="book2-ph" x="149.8" y="6036.1" class="st0" width="476.2" height="673.6" />
+    <foreignObject x="148.7" y="5319.8" class="st0" width="478.5" height="678.9">
+      <img width="100%" height="100%" src="./raw-images/graph-book2.jpg" alt="">
+    </foreignObject>
+    <rect id="future-ph" x="130" y="6757.9" class="st0" width="515.8" height="515.8" />
+    <foreignObject x="130" y="6757.9" class="st0" width="515.8" height="515.8">
+      <img width="100%" height="100%" src="./raw-images/graph-future.jpg" alt="">
+    </foreignObject>
+    <rect id="video1-ph" x="65.1" y="7877.6" class="st0" width="641.6" height="360.9" />
+    <foreignObject x="65.1" y="7877.6" class="st0" width="641.6" height="360.9">
+      <img width="100%" height="100%" src="./raw-images/misc-video1.jpg" alt="">
+    </foreignObject>
+    <rect id="video2-ph" x="65.1" y="8327.9" class="st0" width="641.6" height="360.9" />
+    <foreignObject x="65.1" y="8327.9" class="st0" width="641.6" height="360.9">
+      <img width="100%" height="100%" src="./raw-images/misc-video2.jpg" alt="">
+    </foreignObject>
+    <rect id="lines-ph" x="64.5" y="8790.6" class="st0" width="642.1" height="307.9" />
+    <foreignObject x="64.5" y="8790.6" class="st0" width="642.1" height="307.9">
+      <img width="100%" height="100%" src="./raw-images/misc-lines.png" alt="">
+    </foreignObject>
+  </svg>
+
+  <!--phone version end-->
+
+</body>
+
 </html>
