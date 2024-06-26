@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>A-frame-of-mind</title>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <script src="./dist/aframe-gif-shader.js"></script>
+    <script src="./dist/aframe-gif-component.js"></script>
+    
+</head>
+
+<body>
+    <a-scene>
+
+        <!--assets below-->
+
+
+<a-assets>
+
+<a-asset-items id="ds" src="./assets/DS-lite.gltf"></a-asset-items>
+
+<img src="./images/white-cloud-sky ver 2.jpg" id="360bg">
+
+
+</a-assets>
+
+<!--assets end-->
+
+<!--entities below--> <!--giant enemy crab-->
+
+<a-entity geometry="depth: 1.5; height: 1.5; width: 1.5" position="3 3.37275 -0.77908" material="src: ./images/dog.jpg"
+    animation="dur: 10000; easing: linear; loop: true; property: rotation; to: 0 360 0"
+    rotation="4.34 136.832 9"></a-entity>
+
+<a-entity gltf-model="./assets/DS-lite.gltf" position="-7.21334 -0.86117 0" rotation="19.8 50 7.15" scale="1.02 1.07 1"
+    animation__hover="property: hover"></a-entity>
+
+        <!--and more shapes just like that one bc nostalgia and childhood! simple dimple remake of the nostalgia core game-->
+
+        <!--6 pictures - 3 3d models!!-->
+
+    <a-sky src="#360bg"></a-sky>
+
+    <!--entities end-->
+
+    </a-scene>
+</body>
+
+</html>
