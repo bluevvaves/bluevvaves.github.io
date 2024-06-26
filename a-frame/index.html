@@ -2,47 +2,166 @@
 
 <head>
     <title>A-frame-of-mind</title>
-    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
-    <script src="./dist/aframe-gif-shader.js"></script>
-    <script src="./dist/aframe-gif-component.js"></script>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://mixedreality.mozilla.org/ammo.js/builds/ammo.wasm.js"></script>
+    <script src="http://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
+    <script src="./dist/ammo.js"></script>
+
     
 </head>
 
 <body>
-    <a-scene>
+    <a-scene physics="driver: ammo; debug: false; debugDrawMode: 1;">
 
         <!--assets below-->
 
 
 <a-assets>
 
+    <!--LOADED ASSET FILES-->
+
 <a-asset-items id="ds" src="./assets/DS-lite.gltf"></a-asset-items>
+<a-asset-items id="tv-gray" src="./assets/old-tv.gltf"></a-asset-items>
+<a-asset-items id="tv-red" src="./assets/old-tv-RED.gltf"></a-asset-items>
+<a-asset-items id="book" src="./assets/book.gltf"></a-asset-items>
 
 <img src="./images/white-cloud-sky ver 2.jpg" id="360bg">
 
+<img id="01" src="./images/01.jpg">
+<img id="02" src="./images/02.jpg">
+<img id="03" src="./images/03.jpg">
+
+
+<video id="vid01" autoplay loop="true" src="./videos/vid01.mp4"></video>
+<video id="vid02" autoplay loop="true" src="./videos/vid02.mp4"></video>
+<video id="vid03" autoplay loop="true" src="./videos/vid03.mp4"></video>
+
+
+<audio id="bark" src="./audio/nintendogs.mp3"></audio>
+<audio id="h2o" src="./audio/h2o.mp3"></audio>
 
 </a-assets>
 
 <!--assets end-->
 
-<!--entities below--> <!--giant enemy crab-->
+<!--entities below--> <!--giant enemy crab--> <!--CAMERA-->
+<a-entity id="rig" movement-controls position="0 1 0"
+aabb-collider="targets: .collidable" dynamic-body>
+    <a-entity camera position="0 0" look-controls="pointerLockEnabled: true"
+    look-controls wasd-controls position="0 1.6 0"></a-entity>
+</a-entity>
+
+<!--light-->
+
+<a-entity light="type: ambient; color: #BBB"></a-entity>
+<a-entity light="type: ambient; color: #FFF; intensity: 0.8" position="-0.5 1 1"></a-entity>
+
+
+<!--3D MODELS - DS, CUBES, OTHERS-->
 
 <a-entity geometry="depth: 1.5; height: 1.5; width: 1.5" position="3 3.37275 -0.77908" material="src: ./images/dog.jpg"
     animation="dur: 10000; easing: linear; loop: true; property: rotation; to: 0 360 0"
-    rotation="4.34 136.832 9"></a-entity>
+    sound="src: #bark;
+    autoplay: true;
+    loop: true;
+    volume: 3;
+    refDistance: 5;
+    rolloffFactor: 3"></a-entity>
 
-<a-entity gltf-model="./assets/DS-lite.gltf" position="-7.21334 -0.86117 0" rotation="19.8 50 7.15" scale="1.02 1.07 1"
-    animation__hover="property: hover"></a-entity>
+    <!--gltf models below-->
 
-        <!--and more shapes just like that one bc nostalgia and childhood! simple dimple remake of the nostalgia core game-->
+<!--DS!!!!-->
 
-        <!--6 pictures - 3 3d models!!-->
+<a-entity id="" gltf-model="./assets/DS-lite.gltf" position="-7.21334 -0.86117 0" rotation="19.8 50 7.15" scale="1.02 1.07 1"
+animation="property: position; from: -7.21334 -0.86117 0; to: -8.21334 -2.86117 0; dur: 1000; easing: easeInQuad; dir: alternate; loop: true" color="tomato"
+animation__2="property: rotation; from: 19.8 50 7.15; to: 22.8 57 15.80; dur: 1000; easing: linear; dir: alternate; loop: true"
+class="collidable" dynamic-body></a-entity>
+
+<!--TV GRAY-->
+
+<a-entity id="#tv-gray" gltf-model="./assets/old-tv.gltf" position="-7.803 -4.73 -69.88"
+    rotation="22.759000000000004 22.103 15.681" scale="4 4 4"
+    animation="property: rotation; from: 7.21334 0.86117 0; to: 9.21334 9.86117 0; dur: 2500; dir: alternate; loop: true"
+    color="tomato" class="collidable" dynamic-body="sphereRadius: NaN"
+    sound="src: url(./audio/h2o.mp3);
+    autoplay: true;
+    loop: true;
+    volume: 2;
+    refDistance: 27;
+    rolloffFactor: 6"></a-entity>
+
+    <!--TV RED-->
+
+<a-entity id="#tv-red" gltf-model="./assets/old-tv-RED.gltf" position="3 10 9.88"
+    rotation="60.103 240.681" scale="4 4 4"
+    animation="property: position; from: 3 10 9.88; to: 4 12 10; dur: 3200; easing: easeInQuad; dir: alternate; loop: true"
+    animation__2="property: rotation; from: 60.103 240.681; to: 65.103 243.681; dur: 3000; easing: linear; dir: alternate; loop: true"
+    color="tomato" class="collidable" dynamic-body="sphereRadius: NaN" velocity=""></a-entity>
+
+    <!--BOOK-->
+
+
+<a-entity id="#book" gltf-model="./assets/book.gltf" position="17.38978 -6.76538 5" rotation="20.631 36.682 17.929"
+    scale="3 3 3"
+    animation="property: rotation; from: 20.631 36.682 17.929; to: 27.631 32.682 40.929; dur: 3000; easing: easeInQuad; dir: alternate; loop: true"
+    class="collidable" dynamic-body="sphereRadius: NaN" velocity=""></a-entity>
+
+
+
+        <!--gltf models END-->
+
+<a-entity geometry="depth: 1.5; height: 1.5; width: 1.5" position="0.2 3.42 -4"
+    material="src: ./images/Mario_Party_DS.jpg"
+animation="property: rotation; from: 19.8 50 7.15; to: 22.8 57 15.80; dur: 1000; easing: linear; dir: alternate; loop: true"
+    rotation="0 237.3810 0" scale="0.11 1 1"></a-entity>
+
+<a-entity geometry="depth: 4; height: 2; width: 5" position="-10 -6.373 -6.779" material="src: ./images/juice.png"
+    scale="0.52 0.63 1" rotation="0 0 -26.18"
+    animation="property: rotation; from: 12 30 7.15; to: 15 37 15.80; dur: 2000; easing: easeInQuad; dir: alternate; loop: true"></a-entity>
+
+<a-entity geometry="depth: 4; height: 2; width: 5" position="0.17 -6.373 370" material="src: ./images/door-texture.jpg"
+    scale="9.68 9 16" rotation="90 0 0"></a-entity>
+
+    <!--2D images below-->
+    
+    <a-image src="#01" width="2" height="3" position="-4 -3.373 -10" 
+    animation="property: position; from: -4 -3.373 -10; to: -2 -4.373 -10; dur: 4200; easing: easeInQuad; dir: alternate; loop: true" ></a-image>
+
+
+    <a-image src="#02" width="4" height="6" position="-23 5 -20"
+        animation="property: position; from: -23 5 -20; to: -26 6 -21; dur: 5300; easing: easeInQuad; dir: alternate; loop: true"></a-image>
+
+
+    <a-image src="#03" width="7" height="9" position="30 5 -31"
+    animation="property: position; from: 30 5 -31; to: 32 5 -33; dur: 5800; easing: easeInQuad; dir: alternate; loop: true"></a-image>
+    
+    <!--2D images end-->
+
+    <!--videos below-->
+
+    <a-video src="./videos/vid01.mp4" width="6.222" height="6.222" position="6 3 -20"></a-video>
+
+    <a-video src="./videos/vid02.mp4" width="4.222" height="4.222" position="-41.4908 3 -40" material=""
+        geometry="width: 12; height: 12" rotation="-3.51 60 0"></a-video>
+
+<a-video src="./videos/vid03.mp4" width="9" height="9" position="-39 27.44577 -47" material=""
+    geometry="width: 12; height: 12" rotation="20 46.33 0"></a-video>
+
+
+    <!--videos end-->
 
     <a-sky src="#360bg"></a-sky>
 
     <!--entities end-->
 
     </a-scene>
+
+        <script>
+
+            document.querySelector('#rig').addEventListener('hitstart', function (event) {
+                console.log('Player has collided with', event.detail.el);
+            });
+        </script>
 </body>
 
 </html>
